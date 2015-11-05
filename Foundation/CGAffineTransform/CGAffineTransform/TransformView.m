@@ -22,15 +22,37 @@
     //x坐标乘以sx，y坐标乘以sy
     CGContextScaleCTM(context, 1.0, -1.0);
     //
+    
     UIImage *image = [UIImage imageNamed:@"1.jpg"];
     //加载出图片
-    CGRect imgRect = CGRectMake(0, 0, 100, 100);
+    CGRect imgRect = CGRectMake(10, 5, 100, 100);
     //CGContextDrawImage中的rect是CoreText坐标系下的坐标
     CGContextDrawImage(context, imgRect, image.CGImage);
-    
-    
-    
+
 }
+
+//- (void)drawRect:(CGRect)rect
+//{
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//    
+//    CGContextMoveToPoint(context, 10, 100);
+//    CGContextAddLineToPoint(context, 100, 100);
+//    CGContextAddLineToPoint(context, 59, 40);
+//    CGContextAddLineToPoint(context, 100, 30);
+//    CGContextAddLineToPoint(context, 200, 30);
+//
+//    CGContextSetLineWidth(context, 10);
+//    CGContextSetLineCap(context, kCGLineCapSquare);//线的首尾端的样式
+//    CGContextSetLineJoin(context, kCGLineJoinBevel);//线的连接处的样式
+//    [[UIColor redColor] setStroke];
+//    CGContextStrokePath(context);
+//    
+//    UIImage *image = [UIImage imageNamed:@"1.jpg"];
+//    CGRect imgRect = CGRectMake(0, 0, 100, 100);
+//    [image drawInRect:imgRect];
+//    
+//    
+//}
 
 //平移变换
 //-(void)drawRect:(CGRect)rect

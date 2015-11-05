@@ -172,9 +172,9 @@ paths = CFArrayCreateMutable(kCFAllocatorDefault,
     //每次都要把文本矩阵重置为最初的坐标系（即UIKit坐标系）
     CGContextSetTextMatrix(context, CGAffineTransformIdentity);
     //向下平移到底部
-    CGContextTranslateCTM(context, 0, self.bounds.size.height);
-    //绕x轴翻转
-    CGContextScaleCTM(context, 1, -1);
+//    CGContextTranslateCTM(context, 0, self.bounds.size.height);
+//    //绕x轴翻转
+//    CGContextScaleCTM(context, 1, -1);
   
     //将NSAttributedString 转化为 CFAttributedStringRef （指针）
   CFAttributedStringRef 
